@@ -1,0 +1,31 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.page-header__wrapper {
+  @include container;
+
+  padding-top: 21px;
+}
+
+.page-header__main-nav {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 874px;
+  width: 100%;
+}
+
+.page-header__logo {
+  display: none;
+}
+
+.page-header__toggle {
+  display: none;
+}
