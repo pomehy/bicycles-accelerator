@@ -60,7 +60,7 @@
         </form>
       </div>
     </section>
-    <section class="page-main__about about">
+    <section class="page-main__about about" id="about">
       <div class="about__wrapper">
         <h2>Несколько фактов о нас</h2>
         <ul>
@@ -71,7 +71,7 @@
         </ul>
       </div>
     </section>
-    <section class="page-main__bikes bikes">
+    <section class="page-main__bikes bikes" id="bikes">
       <div class="bikes__wrapper">
         <h2>Виды велосипедов</h2>
         <ul>
@@ -90,7 +90,7 @@
         </ul>
       </div>
     </section>
-    <section class="page-main__video-bikes video-bikes">
+    <section class="page-main__video-bikes video-bikes"  id="video-bikes">
       <div class="video-bikes__wrapper">
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
@@ -98,16 +98,38 @@
           <picture>
             <img src="" alt="Заставка видео про велосипеды">
           </picture>
-          <video src="#" controls></video>
-          <a href="#" aria-label="Показать видео"></a>
+          <video src="#" controls preload="metadata" width="922" height="522"></video>
+          <a href="#"><span class="visually-hidden">Смотреть видео</span></a>
         </div>
       </div>
     </section>
-
   </main>
-  <footer class="page-footer">
-
+  <footer class="page-footer" id="contacts">
+    <section class="page-footer__contacts contacts">
+      <div class="contacts__wrapper">
+        <h2 class="visually-hidden">Контакты магазина</h2>
+        <h3>Как нас найти?</h3>
+        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <div class="contacts__map">
+          <picture>
+            <img src="#" alt="Адрес магазина на карте">
+          </picture>
+        </div>
+        <ul>
+          <li>
+            <a href="mailto:puteshestviemechta@gmail.ru" >
+              <svg></svg>
+              puteshestviemechta@gmail.ru
+            </a>
+          </li>
+          <li>
+            <a href="tel:+749978468446">
+              <svg></svg>
+              +7 (499) -784-684-46</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </footer>
-
 </body>
 </html>
