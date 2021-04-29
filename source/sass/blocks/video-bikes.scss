@@ -34,11 +34,44 @@
 }
 
 .video-bikes__movie {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
     display: flex;
+    width: 922px;
+    height: 522px;
   }
 
-  video {
-    display: none;
+  a {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+
+    width: 65px;
+    height: 65px;
+
+    background-color: $fancy-color;
+    border-radius: 50%;
+
+    background-image: url("../../img/decor/play-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      background-color: $fancy-color-dark;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }
