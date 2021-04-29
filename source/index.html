@@ -41,6 +41,9 @@
     <section class="page-main__intro intro">
       <div class="intro__wrapper">
         <div class="intro__description">
+          <div class="intro__logo logo">
+            <img src="img/logo.svg" alt="Логотип магазина Moon">
+          </div>
           <h2>Мы продаем велосипеды</h2>
           <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
@@ -48,11 +51,11 @@
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="main-form__field">
-              <label for="user-name">Имя:</label>
+              <label class="visually-hidden" for="user-name">Имя:</label>
               <input id="user-name" name="user-name" type="text" placeholder="Введите Ваше Имя" required>
             </div>
             <div class="main-form__field">
-              <label for="user-phone">Телефон:</label>
+              <label class="visually-hidden" for="user-phone">Телефон:</label>
               <input id="user-phone" name="user-phone" type="tel" placeholder="Введите Ваш номер телефона" required>
             </div>
             <button type="submit">Подобрать велосипед мечты</button>
