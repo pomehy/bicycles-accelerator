@@ -1,0 +1,47 @@
+.intro {
+  background-color: $basic-black-light;
+  background-image: url("../../img/intro-bg-bike.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 825px;
+}
+
+.intro__wrapper {
+  @include container;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+
+  margin-top: 37px;
+
+  max-width: 880px;
+}
+
+.intro__description {
+  h2 {
+    margin-top: 24px;
+    margin-bottom: 25px;
+
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 64px;
+    color: $basic-white;
+  }
+
+  p {
+    margin-top: 0;
+
+    font-size: 20px;
+    line-height: 32px;
+    color: transparentize($basic-white, 0.2);
+    letter-spacing: -0.03em;
+  }
+}
+
+.intro__main-form {
+  justify-self: end;
+  padding-top: 4px;
+  max-width: 327px;
+}
