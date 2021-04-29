@@ -32,3 +32,33 @@
     line-height: 41px;
   }
 }
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  width: 100%;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: $basic-black;
+
+  background-color: $fancy-color;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $fancy-color-dark;
+  }
+
+  &:active {
+    color: transparentize($basic-black, 0.4);
+  }
+}
