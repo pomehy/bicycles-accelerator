@@ -1,0 +1,51 @@
+.about {
+  h2 {
+    @include title-style;
+
+    text-align: center;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 39px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+
+    padding-top: 76px;
+    display: flex;
+    justify-content: center;
+    max-width: 263px;
+    width: 100%;
+
+    font-size: 22px;
+    line-height: 34px;
+
+    text-align: center;
+    letter-spacing: -0.015em;
+
+    counter-increment: number;
+
+    &::before {
+      content: "0" counter(number);
+      position: absolute;
+      top: 24px;
+
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      color: $fancy-color;
+    }
+  }
+}
+
+.about__wrapper {
+  @include container;
+}
