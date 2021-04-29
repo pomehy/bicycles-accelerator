@@ -1,0 +1,44 @@
+.video-bikes {
+  background-color: #131314;
+  background-image: linear-gradient(#131314 87.8%, $basic-white 12.2%);
+
+  h2 {
+    @include title-style;
+
+    margin-bottom: 20px;
+
+    color: $basic-white;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 56px;
+
+    max-width: 340px;
+
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.027em;
+    color: transparentize($basic-white, 0.3);
+
+    text-align: center;
+  }
+}
+
+.video-bikes__wrapper {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-bikes__movie {
+  img {
+    display: flex;
+  }
+
+  video {
+    display: none;
+  }
+}
