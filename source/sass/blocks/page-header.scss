@@ -10,6 +10,12 @@
   @include container;
 
   padding-top: 21px;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+
+    padding-top: 25px;
+  }
 }
 
 .page-header__main-nav {
@@ -20,12 +26,51 @@
 
   max-width: 874px;
   width: 100%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__logo {
   display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: none;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: $fancy-color;
+  background-image: url("../../img/decor/toggle-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $fancy-color-dark;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }
