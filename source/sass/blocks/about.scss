@@ -1,6 +1,8 @@
 .about {
   h2 {
     @include title-style;
+
+    letter-spacing: -0.005em;
   }
 
   ul {
@@ -57,6 +59,31 @@
     li {
       &:nth-child(2n+1) {
         justify-self: end;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    ul {
+      grid-template-columns: auto;
+      justify-content: center;
+      row-gap: 35px;
+      margin-top: 19px;
+    }
+
+    li {
+      justify-self: center;
+      padding-top: 57px;
+
+      font-size: 18px;
+      line-height: 34px;
+
+      &::before {
+        top: 11px;
+      }
+
+      &:nth-child(2n+1) {
+        justify-self: center;
       }
     }
   }

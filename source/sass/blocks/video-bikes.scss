@@ -24,7 +24,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    background-image: linear-gradient($basic-black 83%, $basic-white 13%);
+    background-image: linear-gradient(#131314 83%, $basic-white 13%);
 
     h2 {
       margin-bottom: 15px;
@@ -33,6 +33,10 @@
     p {
       max-width: 429px;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: linear-gradient(#131314 89%, $basic-white 11%);
   }
 }
 
@@ -116,6 +120,26 @@
       background-position-x: 54%;
       background-position-y: center;
       background-size: 22%;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 37px;
+
+    width: 100%;
+    height: auto;
+    min-height: 161px;
+
+    img {
+      height: auto;
+    }
+
+    button {
+      width: 65px;
+      height: 65px;
+
+      background-position: center;
+      background-size: auto;
     }
   }
 }

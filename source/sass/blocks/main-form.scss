@@ -28,6 +28,16 @@
       color: $basic-black;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    p {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-top: 19px;
+    }
+  }
 }
 
 .main-form__field {
@@ -70,8 +80,15 @@
 
   @media (max-width: $tablet-width) {
     input {
-      padding-left: 20px;
       padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    input {
+      padding-right: 25px;
+      padding-left: 25px;
     }
   }
 }

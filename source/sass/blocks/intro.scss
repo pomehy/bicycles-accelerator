@@ -30,6 +30,12 @@
       min-height: 340px;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      min-height: 390px;
+    }
+  }
 }
 
 .intro__wrapper {
@@ -47,6 +53,10 @@
     grid-template-columns: 1fr;
 
     margin-top: 49px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 35px;
   }
 }
 
@@ -85,6 +95,7 @@
       margin-bottom: 20px;
       font-size: 30px;
       line-height: 42px;
+      text-align: center;
     }
 
     p {
@@ -94,6 +105,10 @@
       line-height: 32px;
       text-align: center;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 210px;
   }
 }
 
@@ -108,5 +123,10 @@
     padding-top: 0;
 
     max-width: 321px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 121px;
+    max-width: 320px;
   }
 }
