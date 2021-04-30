@@ -1,4 +1,9 @@
 .page-footer__contacts {
   padding-top: 151px;
   padding-bottom: 85px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 42px;
+  }
 }
