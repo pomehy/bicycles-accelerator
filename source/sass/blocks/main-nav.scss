@@ -26,6 +26,7 @@
 
   a {
     display: flex;
+    align-items: center;
     padding-left: 19px;
     padding-right: 23px;
     padding-bottom: 8px;
@@ -42,6 +43,72 @@
 
     &:active {
       color: transparentize($basic-white, 0.7);
+    }
+  }
+
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    background-color: $basic-white;
+
+    ul {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    li {
+      margin-right: 0;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      position: relative;
+
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 16px;
+
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: normal;
+      color: #48494d;
+      background-color: #f6f6f6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 21px;
+
+        width: 25px;
+        height: 25px;
+
+        background-image: url("../../img/decor/icon-arrow-right.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        opacity: 0.5;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $fancy-color;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    a {
+      &::before {
+        right: 16px;
+      }
     }
   }
 }
