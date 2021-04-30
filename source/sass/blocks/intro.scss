@@ -24,6 +24,8 @@
   }
 
   @media (max-width: $tablet-width) {
+    min-height: 700px;
+
     &::before {
       min-height: 340px;
     }
