@@ -6,4 +6,8 @@
     padding-top: 64px;
     padding-bottom: 42px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 71px;
+  }
 }
