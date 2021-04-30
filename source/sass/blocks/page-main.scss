@@ -12,26 +12,26 @@
 }
 
 .page-main__about {
-  padding-top: 151px;
+  padding-top: 121px;
   padding-bottom: 153px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 53px;
+    padding-top: 23px;
     padding-bottom: 70px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 71px;
+    padding-top: 41px;
     padding-bottom: 81px;
   }
 }
 
 .page-main__bikes {
-  padding-top: 150px;
+  padding-top: 120px;
   padding-bottom: 127px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 
@@ -41,13 +41,13 @@
 }
 
 .page-main__video-bikes {
-  padding-top: 120px;
+  padding-top: 90px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 64px;
+    padding-top: 34px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 78px;
+    padding-top: 48px;
   }
 }
