@@ -19,6 +19,11 @@
     padding-top: 53px;
     padding-bottom: 70px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 71px;
+    padding-bottom: 81px;
+  }
 }
 
 .page-main__bikes {
@@ -29,6 +34,10 @@
     padding-top: 50px;
     padding-bottom: 20px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 12px;
+  }
 }
 
 .page-main__video-bikes {
@@ -36,5 +45,9 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 64px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 78px;
   }
 }
