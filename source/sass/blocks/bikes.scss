@@ -172,6 +172,39 @@
       margin-left: 25px;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 8px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+
+    &:nth-of-type(3n+1) {
+      .bikes__image-wrapper {
+        &::before {
+          left: -25px;
+        }
+      }
+    }
+
+    &:nth-of-type(3n+2) {
+      margin-right: 8px;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 8px;
+
+      .bikes__image-wrapper {
+        &::before {
+          right: -14px;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
 }
 
 .bikes__image-wrapper {
