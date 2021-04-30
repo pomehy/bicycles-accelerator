@@ -42,6 +42,24 @@
       color: $fancy-color;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    h2 {
+      margin-bottom: 6px;
+    }
+
+    ul {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 31px;
+      row-gap: 21px;
+    }
+
+    li {
+      &:nth-child(2n+1) {
+        justify-self: end;
+      }
+    }
+  }
 }
 
 .about__wrapper {
