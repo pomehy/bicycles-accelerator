@@ -59,14 +59,14 @@
         </div>
         <div class="intro__main-form main-form">
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
+          <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="main-form__field">
               <label class="visually-hidden" for="user-name">Имя:</label>
-              <input id="user-name" name="user-name" type="text" placeholder="Введите Ваше Имя" required>
+              <input id="user-name" name="user-name" type="text" placeholder="Введите Ваше Имя" minlength="1" required>
             </div>
             <div class="main-form__field">
               <label class="visually-hidden" for="user-phone">Телефон:</label>
-              <input id="user-phone" name="user-phone" type="tel" placeholder="Введите Ваш номер телефона" required>
+              <input id="user-phone" name="user-phone" type="tel" placeholder="Введите Ваш номер телефона" minlength="10" required>
             </div>
             <button type="submit">Подобрать велосипед мечты</button>
           </form>
@@ -138,7 +138,7 @@
         </div>
       </div>
     </section>
-    <section class="page-main__video-bikes video-bikes">
+    <section class="page-main__video-bikes video-bikes video-bikes--nojs">
       <div class="video-bikes__wrapper" id="video-bikes">
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
