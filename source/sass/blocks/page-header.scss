@@ -12,6 +12,7 @@
   @media (max-width: $tablet-width) {
     .page-header__main-nav {
       display: flex;
+      min-height: 100vh;
     }
 
     .page-header__toggle {
@@ -35,6 +36,7 @@
     .page-header__main-nav {
       position: relative;
       display: flex;
+      min-height: 568px;
     }
 
     .page-header__logo {
