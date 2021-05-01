@@ -40,6 +40,16 @@
   }
 }
 
+.video-bikes--nojs {
+  img {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+}
+
 .video-bikes__wrapper {
   @include container;
 
