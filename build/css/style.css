@@ -79,7 +79,7 @@ img {
     min-height: 100vh; }
   .page-header--active .page-header__toggle {
     background-color: #ffffff;
-    background-image: url("../../img/decor/toggle-menu-cross.svg"); }
+    background-image: url(".././img/decor/toggle-menu-cross.svg"); }
     .page-header--active .page-header__toggle:hover, .page-header--active .page-header__toggle:focus {
       background-color: #f6f6f6; } }
 
@@ -167,7 +167,7 @@ img {
   width: 50px;
   height: 50px;
   background-color: #0ad9c6;
-  background-image: url("../../img/decor/toggle-menu.svg");
+  background-image: url(".././img/decor/toggle-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -210,7 +210,7 @@ img {
   padding-bottom: 153px; }
   @media (max-width: 1023px) {
     .page-main__about {
-      padding-top: 23px;
+      padding-top: 40px;
       padding-bottom: 70px; } }
   @media (max-width: 767px) {
     .page-main__about {
@@ -333,29 +333,29 @@ img {
     width: 100%;
     min-height: 100%;
     background-color: #1f1f1f;
-    background-image: url("../../img/intro-bg-desktop@1x.jpg");
+    background-image: url(".././img/intro-bg-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .intro::before {
-        background-image: url("../../img/intro-bg-desktop@2x.jpg"); } }
+        background-image: url(".././img/intro-bg-desktop@2x.jpg"); } }
   @media (max-width: 1023px) {
     .intro {
       min-height: auto; }
       .intro::before {
         min-height: 49.8%;
-        background-image: url("../../img/intro-bg-tablet@1x.jpg"); } }
+        background-image: url(".././img/intro-bg-tablet@1x.jpg"); } }
     @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
       .intro::before {
-        background-image: url("../../img/intro-bg-tablet@2x.jpg"); } }
+        background-image: url(".././img/intro-bg-tablet@2x.jpg"); } }
   @media (max-width: 767px) {
     .intro::before {
       min-height: 52%;
-      background-image: url("../../img/intro-bg-mobile@1x.jpg"); } }
+      background-image: url(".././img/intro-bg-mobile@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
     .intro::before {
-      background-image: url("../../img/intro-bg-mobile@2x.jpg"); } }
+      background-image: url(".././img/intro-bg-mobile@2x.jpg"); } }
 
 .intro__wrapper {
   max-width: 1170px;
@@ -547,7 +547,8 @@ img {
   @media (max-width: 767px) {
     .main-form__field input {
       padding-right: 25px;
-      padding-left: 25px; } }
+      padding-left: 25px;
+      letter-spacing: -0.02em; } }
 
 .about h2 {
   margin-top: 0;
@@ -927,7 +928,7 @@ img {
     width: 65px;
     height: 65px;
     background-color: #0ad9c6;
-    background-image: url("../../img/decor/play-icon.svg");
+    background-image: url(".././img/decor/play-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -971,7 +972,7 @@ img {
   padding-bottom: 85px; }
   @media (max-width: 1023px) {
     .page-footer__contacts {
-      padding-top: 34px;
+      padding-top: 40px;
       padding-bottom: 42px; } }
   @media (max-width: 767px) {
     .page-footer__contacts {
@@ -999,8 +1000,8 @@ img {
 
 @media (max-width: 1023px) {
   .contacts h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 20px;
+    font-size: 24px;
     line-height: 30px; }
   .contacts p {
     max-width: 100%; }
@@ -1011,7 +1012,8 @@ img {
   .contacts h3 {
     margin-bottom: 20px;
     padding-right: 16px;
-    padding-left: 16px; }
+    padding-left: 16px;
+    font-size: 18px; }
   .contacts p {
     padding-right: 16px;
     padding-left: 16px; } }
@@ -1058,13 +1060,15 @@ img {
   width: 100%;
   height: 530px; }
   .contacts__map img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .contacts__map iframe {
+    width: 100%;
+    height: 100%;
+    border: none; }
   @media (max-width: 1023px) {
     .contacts__map {
       margin-top: 3px;
@@ -1076,6 +1080,11 @@ img {
       margin-bottom: 20px;
       max-width: 100%;
       height: 250px; } }
+
+.contacts__map--nojs img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .contacts__list {
   min-width: 563px; }

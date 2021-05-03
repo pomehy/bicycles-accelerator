@@ -8,9 +8,11 @@ const videoBikes = document.querySelector('.video-bikes');
 const videoPoster = videoBikes.querySelector('img');
 const playVideoButton = document.querySelector('#video-bikes-play');
 const inputForms = document.querySelectorAll('input');
+const contactsMap = document.querySelector('.contacts__map');
 
 pageHeader.classList.remove('page-header--nojs');
 videoBikes.classList.remove('video-bikes--nojs');
+contactsMap.classList.remove('contacts__map--nojs');
 
 headerToggle.addEventListener('click', (evt) => {
   evt.preventDefault();
@@ -56,12 +58,13 @@ playVideoButton.addEventListener('click', (evt) => {
 
 for (let i = 0; i < inputForms.length; i++) {
   if (inputForms[i].type === 'tel') {
+    inputForms[i].removeAttribute('maxlength');
     let keyCode;
 
     function mask(event) {
       event.keyCode && (keyCode = event.keyCode);
-      let startPosition = this.selectionStart;
-      if (startPosition < 3) event.preventDefault();
+      let position = this.selectionStart;
+      if (position < 3) event.preventDefault();
 
       let matrix = "+7 (___) ___ ____",
         i = 0,
@@ -76,8 +79,8 @@ for (let i = 0; i < inputForms.length; i++) {
         newValue = newValue.slice(0, i)
       }
       let reg = matrix.substr(0, this.value.length).replace(/_+/g,
-        function (a) {
-          return "\\d{1," + a.length + "}"
+        function (evt) {
+          return "\\d{1," + evt.length + "}"
         }).replace(/[+()]/g, "\\$&");
       reg = new RegExp("^" + reg + "$");
       if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
@@ -87,5 +90,13 @@ for (let i = 0; i < inputForms.length; i++) {
     inputForms[i].addEventListener("input", mask, false);
     inputForms[i].addEventListener("focus", mask, false);
     inputForms[i].addEventListener("blur", mask, false);
+  }
+
+  if (inputForms[i].id === 'user-name') {
+    const regex = /[^a-zA-Zа-яА-ЯёЁ .]/i;
+
+    inputForms[i].addEventListener('input', function () {
+      this.value = this.value.replace(regex, '');
+    })
   }
 };
