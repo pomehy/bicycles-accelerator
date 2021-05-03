@@ -100,3 +100,27 @@ for (let i = 0; i < inputForms.length; i++) {
     })
   }
 };
+
+{
+  contactsMap.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    contactsMap.classList.add('contacts__map--active');
+    const iframeMap = document.createElement('iframe');
+    iframeMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65314281214916!2d30.32264893911616!3d59.9385707348118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620037403659!5m2!1sru!2sru"
+    iframeMap.allowFullscreen = true;
+    iframeMap.title = 'Местоположение на карте магазина Moon';
+    contactsMap.append(iframeMap);
+  }, { once: true });
+
+
+  document.addEventListener('click', function (evt) {
+    const map = document.querySelector('#map-wrap iframe');
+    if (map) {
+      if (evt.target.id === 'map-wrap') {
+        map.style.pointerEvents = 'all';
+      } else {
+        map.style.pointerEvents = 'none';
+      }
+    }
+  });
+}
