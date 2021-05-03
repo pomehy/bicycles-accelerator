@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Продажа велосипедов для взрослых и детей! Выбери велосипед своей мечты!">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preload" href="fonts/opensans-regular.woff" as="font" crossorigin="">
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="">
   <link rel="preload" href="fonts/opensans-light.woff" as="font" crossorigin="">
@@ -168,7 +169,7 @@
         <h2 class="visually-hidden">Контакты магазина</h2>
         <h3>Как нас найти?</h3>
         <p>Мы находимся по адресу: <span>Санкт-Петербург,</span> ул.&nbsp;Большая Конюшенная, д.&nbsp;19</p>
-        <div class="contacts__map contacts__map--nojs">
+        <div class="contacts__map" id="map-wrap">
           <picture>
             <!-- 1х: 320x250px; 2x: 640x500px -->
             <source type="image/webp" media="(max-width:767px)"
@@ -182,7 +183,6 @@
             <img src="img/map-desktop.jpg" srcset="img/map-desktop@2x.jpg 2x" alt="Адрес магазина на карте" width="957"
               height="530">
           </picture>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65314281214916!2d30.32264893911616!3d59.9385707348118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620037403659!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="contacts__list">
           <ul>
@@ -206,7 +206,7 @@
       </div>
     </section>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" async></script>
 </body>
 
 </html>
