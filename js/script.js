@@ -61,35 +61,35 @@ for (let i = 0; i < inputForms.length; i++) {
     inputForms[i].removeAttribute('maxlength');
     let keyCode;
 
-    function mask(event) {
-      event.keyCode && (keyCode = event.keyCode);
+    function mask(evt) {
+      evt.keyCode && (keyCode = evt.keyCode);
       let position = this.selectionStart;
-      if (position < 3) event.preventDefault();
+      if (position < 3) evt.preventDefault();
 
-      let matrix = "+7 (___) ___ ____",
+      let matrix = '+7 (___) ___ ____',
         i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, ""),
+        def = matrix.replace(/\D/g, ''),
+        value = this.value.replace(/\D/g, ''),
         newValue = matrix.replace(/[_\d]/g, function (a) {
-          return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+          return i < value.length ? value.charAt(i++) || def.charAt(i) : a
         });
-      i = newValue.indexOf("_");
+      i = newValue.indexOf('_');
       if (i != -1) {
         i < 5 && (i = 3);
         newValue = newValue.slice(0, i)
       }
       let reg = matrix.substr(0, this.value.length).replace(/_+/g,
         function (evt) {
-          return "\\d{1," + evt.length + "}"
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
+          return '\\d{1,' + evt.length + '}'
+        }).replace(/[+()]/g, '\\$&');
+      reg = new RegExp('^' + reg + '$');
       if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
-      if (event.type == "blur" && this.value.length < 5) this.value = ""
+      if (evt.type == 'blur' && this.value.length < 5) this.value = ''
     }
 
-    inputForms[i].addEventListener("input", mask, false);
-    inputForms[i].addEventListener("focus", mask, false);
-    inputForms[i].addEventListener("blur", mask, false);
+    inputForms[i].addEventListener('input', mask, false);
+    inputForms[i].addEventListener('focus', mask, false);
+    inputForms[i].addEventListener('blur', mask, false);
   }
 
   if (inputForms[i].id === 'user-name') {
@@ -106,7 +106,7 @@ for (let i = 0; i < inputForms.length; i++) {
     evt.preventDefault();
     contactsMap.classList.add('contacts__map--active');
     const iframeMap = document.createElement('iframe');
-    iframeMap.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65314281214916!2d30.32264893911616!3d59.9385707348118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620037403659!5m2!1sru!2sru"
+    iframeMap.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65314281214916!2d30.32264893911616!3d59.9385707348118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620037403659!5m2!1sru!2sru'
     iframeMap.allowFullscreen = true;
     iframeMap.title = 'Местоположение на карте магазина Moon';
     contactsMap.append(iframeMap);
