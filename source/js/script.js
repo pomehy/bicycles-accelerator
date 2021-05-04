@@ -14,7 +14,7 @@ pageHeader.classList.remove('page-header--nojs');
 videoBikes.classList.remove('video-bikes--nojs');
 contactsMap.classList.remove('contacts__map--nojs');
 
-headerToggle.addEventListener('click', (evt) => {
+headerToggle.addEventListener('click', function(evt) {
   evt.preventDefault();
 
   if (pageHeader.classList.contains('page-header--active')) {
@@ -35,7 +35,7 @@ try {
   isStorageSupport = false;
 }
 
-const addLocalStorage = () => {
+const addLocalStorage = function() {
   if (isStorageSupport) {
     for (let i = 0; i < inputForms.length; i++) {
       if (inputForms[i].type === 'tel' || inputForms[i].id === 'user-name') {
@@ -46,11 +46,11 @@ const addLocalStorage = () => {
   }
 }
 
-mainForm.addEventListener('submit', function(evt) {
+mainForm.addEventListener('submit', function() {
   addLocalStorage();
 });
 
-playVideoButton.addEventListener('click', (evt) => {
+playVideoButton.addEventListener('click', function(evt) {
   evt.preventDefault();
   videoPoster.classList.add('visually-hidden');
   playVideoButton.classList.add('visually-hidden');
@@ -70,7 +70,7 @@ for (let i = 0; i < inputForms.length; i++) {
         i = 0,
         def = matrix.replace(/\D/g, ''),
         value = this.value.replace(/\D/g, ''),
-        newValue = matrix.replace(/[_\d]/g, function (a) {
+        newValue = matrix.replace(/[_\d]/g, function(a) {
           return i < value.length ? value.charAt(i++) || def.charAt(i) : a
         });
       i = newValue.indexOf('_');
@@ -95,7 +95,7 @@ for (let i = 0; i < inputForms.length; i++) {
   if (inputForms[i].id === 'user-name') {
     const regex = /[^a-zA-Zа-яА-ЯёЁ .]/i;
 
-    inputForms[i].addEventListener('input', function () {
+    inputForms[i].addEventListener('input', function() {
       this.value = this.value.replace(regex, '');
     })
   }
@@ -113,7 +113,7 @@ for (let i = 0; i < inputForms.length; i++) {
   }, { once: true });
 
 
-  document.addEventListener('click', function (evt) {
+  document.addEventListener('click', function(evt) {
     const map = document.querySelector('#map-wrap iframe');
     if (map) {
       if (evt.target.id === 'map-wrap') {
