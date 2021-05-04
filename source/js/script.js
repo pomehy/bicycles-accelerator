@@ -97,6 +97,10 @@ for (let i = 0; i < inputForms.length; i++) {
 
     inputForms[i].addEventListener('input', function() {
       this.value = this.value.replace(regex, '');
+
+      if (inputForms[i].value.match(regex)) {
+        inputForms[i].setCustomValidity('Введите буквы');
+      }
     })
   }
 };
