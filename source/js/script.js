@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+(function () {
   const pageHeader = document.querySelector('.page-header');
   const headerToggle = document.querySelector('.page-header__toggle');
 
@@ -9,7 +9,7 @@
   }
 
   if (headerToggle) {
-    headerToggle.addEventListener('click', function(evt) {
+    headerToggle.addEventListener('click', function (evt) {
       evt.preventDefault();
 
       if (pageHeader.classList.contains('page-header--active')) {
@@ -21,18 +21,17 @@
   }
 })();
 
-(function() {
+(function () {
   const mainForm = document.querySelector('.main-form');
-  const mainFormSubmitButton = mainForm.querySelector('button');
   const inputForms = document.querySelectorAll('input');
-  const addLocalStorage = function() {
+  const addLocalStorage = function () {
     let isStorageSupport = true;
     let storagePhone = '';
     let storageUserName = '';
 
     try {
-      storagePhone = localStorage.getItem('phone');
-      storageUserName = localStorage.getItem('user-name');
+      let storagePhone = localStorage.getItem('phone');
+      let storageUserName = localStorage.getItem('user-name');
     } catch (err) {
       isStorageSupport = false;
     }
@@ -48,7 +47,7 @@
   };
 
   if (mainForm) {
-    mainForm.addEventListener('submit', function() {
+    mainForm.addEventListener('submit', function () {
       addLocalStorage();
     });
 
@@ -60,15 +59,19 @@
         function mask(evt) {
           evt.keyCode && (keyCode = evt.keyCode);
           let position = this.selectionStart;
-          if (position < 3) evt.preventDefault();
 
-          let matrix = '+7 (___) ___ ____',
-            i = 0,
-            def = matrix.replace(/\D/g, ''),
-            value = this.value.replace(/\D/g, ''),
-            newValue = matrix.replace(/[_\d]/g, function(a) {
-              return i < value.length ? value.charAt(i++) || def.charAt(i) : a
-            });
+          if (position < 3) {
+            evt.preventDefault();
+          }
+
+          let matrix = '+7 (___) ___ ____';
+          i = 0;
+          let def = matrix.replace(/\D/g, '');
+          let value = this.value.replace(/\D/g, '');
+          let newValue = matrix.replace(/[_\d]/g, function (a) {
+              return i < value.length ? value.charAt(i++) || def.charAt(i) : a;
+          });
+
           i = newValue.indexOf('_');
           if (i != -1) {
             i < 5 && (i = 3);
@@ -81,7 +84,7 @@
           reg = new RegExp('^' + reg + '$');
           if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
           if (evt.type == 'blur' && this.value.length < 5) this.value = ''
-        }
+        };
 
         inputForms[i].addEventListener('input', mask, false);
         inputForms[i].addEventListener('focus', mask, false);
@@ -91,7 +94,7 @@
       if (inputForms[i].id === 'user-name') {
         const regex = /[^a-zA-Zа-яА-ЯёЁ .]/i;
 
-        inputForms[i].addEventListener('input', function() {
+        inputForms[i].addEventListener('input', function () {
           this.value = this.value.replace(regex, '');
 
           if (inputForms[i].value.match(regex)) {
@@ -122,7 +125,7 @@
 })();
 
 
-(function() {
+(function () {
   const contactsMap = document.querySelector('.contacts__map');
 
   if (contactsMap) {
@@ -130,7 +133,7 @@
   }
 
   if (contactsMap) {
-    contactsMap.addEventListener('click', function(evt) {
+    contactsMap.addEventListener('click', function (evt) {
       evt.preventDefault();
       contactsMap.classList.add('contacts__map--active');
       const iframeMap = document.createElement('iframe');
