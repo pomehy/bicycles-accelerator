@@ -22,9 +22,26 @@
 })();
 
 (function () {
+  const mainForm = document.querySelector('.main-form');
   const inputForms = document.querySelectorAll('input');
 
+  const addLocalStorage = function (input) {
+    let isStorageSupport = true;
+
+    if (isStorageSupport) {
+      if (input.type === 'tel' || input.id === 'user-name') {
+        let storageKey = input.name;
+        localStorage.setItem(storageKey, input.value);
+      }
+    }
+  };
+
   for (let j = 0; j < inputForms.length; j++) {
+    if (mainForm) {
+      mainForm.addEventListener('submit', function () {
+        addLocalStorage(inputForms[j]);
+      });
+    }
     if (inputForms[j].type === 'tel') {
       inputForms[j].removeAttribute('maxlength');
 
