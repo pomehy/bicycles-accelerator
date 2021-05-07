@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  const pageBody = document.querySelector('.page-body');
   const pageHeader = document.querySelector('.page-header');
   const headerToggle = document.querySelector('.page-header__toggle');
 
@@ -14,8 +15,10 @@
 
       if (pageHeader.classList.contains('page-header--active')) {
         pageHeader.classList.remove('page-header--active');
+        pageBody.classList.remove('page-body--no-scroll');
       } else {
         pageHeader.classList.add('page-header--active');
+        pageBody.classList.add('page-body--no-scroll');
       }
     });
   }
