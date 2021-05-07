@@ -10,6 +10,9 @@
 
 .page-header--active {
   @media (max-width: $tablet-width) {
+    height: 100%;
+    overflow-y: scroll;
+
     .page-header__main-nav {
       display: flex;
       min-height: 100vh;
