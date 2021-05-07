@@ -107,11 +107,15 @@
 }
 
 .contacts__list {
-  min-width: 563px;
+  min-width: 560px;
+  max-width: 650px;
 
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
 
     margin: 0;
     padding: 0;
@@ -120,11 +124,7 @@
   }
 
   li {
-    margin-right: 93px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    padding-right: 14px;
   }
 
   a {
