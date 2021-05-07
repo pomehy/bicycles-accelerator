@@ -14,4 +14,10 @@
   letter-spacing: -0.005em;
 
   background-color: $basic-white;
+
+  overflow-x: hidden;
+}
+
+.page-body--no-scroll {
+  overflow: hidden;
 }
