@@ -62,7 +62,11 @@ img {
   font-style: normal;
   font-size: 16px;
   letter-spacing: -0.005em;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+.page-body--no-scroll {
+  overflow: hidden; }
 
 .page-header {
   position: absolute;
@@ -1087,20 +1091,23 @@ img {
   display: none; }
 
 .contacts__list {
-  min-width: 563px; }
+  min-width: 560px;
+  max-width: 650px; }
   .contacts__list ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none; }
   .contacts__list li {
-    margin-right: 93px; }
-    .contacts__list li:last-child {
-      margin-right: 0; }
+    padding-right: 14px; }
   .contacts__list a {
     display: -webkit-box;
     display: -ms-flexbox;
